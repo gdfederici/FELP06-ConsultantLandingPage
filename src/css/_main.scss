@@ -1,1 +1,60 @@
 @import 'theme';
+
+/*** VARIABLES ***/
+
+/*** MIXIN ***/
+@mixin button($radius) {
+    padding: 17px auto 16px auto;
+    border-radius: $radius;  
+}
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+.button__base, .button__special {
+    padding: 17px 65px 16px 66px;
+    border-radius: 10px;
+}
+
+
+/*** HEADER ***/
+.header {
+    &-navbar {
+        padding: 22px 242px 22px 245px;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-main {
+        padding: 196px 242px 112px 245px;
+        max-width: 750px;
+        & h1 {
+            max-width: 548px;
+        }
+        & p {
+            padding: 30px 0;
+        }
+    }
+}
+
+.navbar{
+    &-logo {
+        width: 220px;
+        padding-left: 93px;
+    }
+    &-menu {
+        & ul {
+            display: flex;
+            justify-content: flex-start;
+        }
+        & li {
+            padding-right: 58px;
+        }
+        & li:last-child {
+            padding-right: 0;
+        }
+        & .icon {
+            display: none;
+        }
+    }
+}

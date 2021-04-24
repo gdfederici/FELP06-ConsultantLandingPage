@@ -73,3 +73,149 @@
          url('../fonts/rubik-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/rubik-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+/*** VARIABLES ***/
+$font-h_1: 'DM Serif Display', Arial, Helvetica, sans-serif;
+$font-h_2: 'PT Serif', Arial, Helvetica, sans-serif;
+$font-h_minor: 'Poppins', Arial, Helvetica, sans-serif;
+$font-p: 'Poppins', Arial, Helvetica, sans-serif;
+$font-button: 'Rubik', Arial, Helvetica, sans-serif;
+$font_normal: 400;
+$font_semibold: 500;
+$font_bold: 600;
+$font_ultrabold: 700;
+$font-size_h1: 5.6rem;
+$font-size_h2: 4.8rem;
+$font-size_h3: 2.6rem;
+$font-size_h4: 2.2rem;
+$font-size_h5: 2.6rem;
+$font-size_h6: 2.0rem;
+$font-size_normal: 1.8rem;
+$font-size_s: 1.6rem;
+$font-size_xs: 1.2rem;
+$line-height_h1: 5.6rem;
+$line-height_h2: 6.72rem;
+$line-height_h3: 3.9rem;
+$line-height_h4: 4.0rem;
+$line-height_h5: 2.6rem;
+$line-height_h6: 3.0rem;
+$line-height_normal: 3.0rem;
+$line-height_s: 2.0rem;
+$line-height_footer: 2.4rem;
+$line-height_form: 4.0rem;
+$line-height_button: 2.7rem;
+
+/*** EXTEND PLACEHOLDER ***/
+%header-minor {
+    font: {
+        family: $font-h_minor;
+        weight: $font_semibold;
+    }
+}
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+body {
+    font: {
+        family: $font-p;
+        weight: $font_normal;
+        size: $font-size_normal;
+    }
+    line-height: $line-height_normal;
+    text-align: left;
+}
+h1 {
+    font: {
+        family: $font-h_1;
+        weight: $font-normal;
+        size: $font-size_h1;
+    }
+    line-height: $line-height_h1;
+}
+h2 {
+    font: {
+        family: $font-h_2;
+        weight: $font-normal;
+        size: $font-size_h2;
+    }
+    line-height: $line-height_h2;
+}
+h3 {
+    @extend %header-minor;
+    font-size: $font-size_h3;
+    line-height: $line-height_h3;
+}
+h4 {
+    @extend %header-minor;
+    font-size: $font-size_h4;
+    line-height: $line-height_h4;
+}
+h5 {
+    @extend %header-minor;
+    font-size: $font-size_h5;
+    line-height: $line-height_h5;
+}
+h6 {
+    @extend %header-minor;
+    font-size: $font-size_h6;
+    line-height: $line-height_h6;
+}
+.button {
+    &__base, &__special {
+        font: {
+            family: $font-p;
+            weight: $font_bold;
+            size: $font-size_normal;
+        }
+        line-height: 2.7rem;
+    }
+    &__cta {
+        font: {
+            family: $font-button;
+            weight: $font_ultrabold;
+            size: $font-size_s;
+        }
+        line-height: 1.89rem;
+        text-transform: uppercase;
+    }
+    &__faq {
+        font: {
+            family: $font-p;
+            weight: $font_normal;
+            size: $font-size_normal;
+        }
+        line-height: $line-height_normal;
+        text-align: left;
+    }
+    &__faq-more {
+        font: {
+            family: $font-button;
+            weight: $font_ultrabold;
+            size: $font-size_normal;
+        }
+        line-height: $line-height_normal;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+    }
+}
+
+
+/*** HEADER ***/
+.header-main div {
+    line-height: 60px;
+} 
+
+.navbar {
+    line-height: 72px;
+    &-logo {
+        font: {
+            family: 'Roboto', Arial, Helvetica, sans-serif;;
+            weight: $font_normal;
+            size: $font-size_h4;
+        }
+    }
+    &-menu {
+        font-weight: $font_semibold;
+    }
+}

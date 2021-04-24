@@ -1,1 +1,91 @@
 @import 'font';
+
+/*** VARIABLES ***/
+$color-theme_1: #9b9bca;
+$color-theme_2: #f01f35;
+$color-theme_hover1: #747496;
+$color-theme_hover2: #bd1929;
+$color-h1: #696a86;
+$color-h2: #402b2b;
+$color-h3: #626780;
+$color-h4: #626780;
+$color-h5: #000000;
+$color-h6: #ffffff;
+$color-text_dark: #626780;
+$color-text_light: #ffffff;
+$color-text_header: #696a86;
+$color-text_nav: #717784;
+$color-text_faq: #402b2b;
+$color-text_testimonial: #9d9d9d;
+$color-text_footer: #e5e5e5;
+$color-back: #ffffff;
+$color-back_faq: #f5f5ff;
+$color-back_footer: #9b9bca;
+
+/*** MIXIN ***/
+@mixin service-box_ico($service) {
+    background: url('../img/ico_'+$service+'.svg') no-repeat top center;
+}
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+body {
+    color: $color-text_dark;
+    background-color: #E5E5E5;
+}
+.content { background-color: $color-back; }
+h1 { color: $color-h1; }
+h2 { color: $color-h2; }
+h3 { color: $color-h3; }
+h4 { color: $color-h4; }
+h5 { color: $color-h5; }
+h6 { color: $color-h6; }
+.button {
+    color: $color-text_light;
+    text-decoration: none;
+    &__base, &__cta {
+        background-color: $color-theme_1;
+        &:hover {
+            background-color: $color-theme_hover1;
+        }
+    }
+    &__special {
+        background-color: $color-theme_2;
+        &:hover {
+            background-color: $color-theme_hover2;
+        }
+    }
+}
+
+
+/*** HEADER ***/
+.header {
+    background: url(../img/hero_header.jpg);
+    background-size: cover;
+    &-navbar {
+        background: rgba(196,196,196,0.1);
+    }
+}
+
+.navbar {
+    color: $color-text_nav;
+    & a {
+        color: $color-text_nav;
+        text-decoration: none;
+        &:hover {
+            color: $color-theme_hover1;
+            text-decoration: underline;
+        }
+    }
+    &-logo {
+        color: #505050;
+        background: url(../img/logo-dw.png) no-repeat left;
+    }
+    &-menu li:last-child a {
+        color: $color-text_light;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
