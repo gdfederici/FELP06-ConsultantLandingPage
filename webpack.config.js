@@ -1,5 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -8,19 +8,25 @@ module.exports = {
     watch: true,
     // IT_ File Javascript di entrata pre-compilato.
     // EN_ Pre-compiled entry Javascript file.
-    entry: './src/scripts/index.js',
+    entry: {
+        index: './src/scripts/index.js',
+    },
     // IT_ Mappe di origine a supporto del mode development.
     // EN_ Source maps to help mode development.
     devtool: 'inline-source-map',
     plugins: [
         // EN_ Generate an HTML file.
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            title: 'Output Management',
+            template: 'src/index.html',
+        }),
     ],
     // IT_ Cartella di output per i file compilati e nome del file Javascript.
     // EN_ Output folder for compiled files and Javascript filename.
     output: {
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        clean: true,
     },
     module: {
         rules: [
@@ -61,6 +67,11 @@ module.exports = {
                 test: /\.(jpg|png|svg)$/,
                 type: 'asset',
                 generator: { filename: 'img/[name][ext]' }
+            },
+            // EN_ Loader -> html.
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
             }
         ]
     }
