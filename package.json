@@ -1,23 +1,30 @@
 {
-  "name": "ConsultantLandingPage_01",
+  "name": "consultant-landing-page_01",
   "version": "1.0.0",
   "description": "Work in progress...",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gdfederici/WFE_LP03-ConsultantLandingPage_01.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "GDFederici",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gdfederici/WFE_LP03-ConsultantLandingPage_01/issues"
   },
   "homepage": "https://github.com/gdfederici/WFE_LP03-ConsultantLandingPage_01#readme",
   "devDependencies": {
+    "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.35.1",
     "webpack-cli": "^4.6.0"
   }
