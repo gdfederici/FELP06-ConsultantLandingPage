@@ -1,0 +1,24 @@
+{
+  "name": "ConsultantLandingPage_01",
+  "version": "1.0.0",
+  "description": "Work in progress...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdfederici/WFE_LP03-ConsultantLandingPage_01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdfederici/WFE_LP03-ConsultantLandingPage_01/issues"
+  },
+  "homepage": "https://github.com/gdfederici/WFE_LP03-ConsultantLandingPage_01#readme",
+  "devDependencies": {
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0"
+  }
+}
