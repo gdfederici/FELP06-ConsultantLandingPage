@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "development",
+    mode: "development", 
     // IT_ Guarda i file e ricompila ogni volta che cambiano.
     // EN_ Watch files and recompile whenever they change.
     watch: true,
