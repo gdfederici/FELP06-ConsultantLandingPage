@@ -190,3 +190,58 @@
     padding: 33px 215px 27px 223px;
     border-radius: 10px;
 }
+
+
+/*** FEATURE ***/
+.feature {
+    margin-top: 167px;
+    padding: 0 245px 67px 313px;
+    &-intro {
+        width: 660px;
+        margin: 0 auto;
+    }
+    &-boxes {
+        margin-top: 162px;
+    }
+    &-middle {
+        margin: 212px auto 103px auto;
+        padding-left: 382px;
+        width: 660px;
+    }
+    &-testimonials {
+        padding-left: 554px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 69px;
+    &-box {
+        width: 442px;
+        /* Per il gradiente lineare sul bordo. Uso le immagini di sfondo sfruttando il bianco della grafica. */
+        border: solid 1px transparent;
+        border-radius: 10px;
+        background-image: linear-gradient(white, white), linear-gradient(180deg, rgba(210,210,210,1), rgba(157,157,157,0));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        & img {
+            margin-top: 60px;
+            margin-bottom: 53px;
+        }
+        & h5 {
+            margin-bottom: 22px;
+        }
+        & p {
+            margin: 0 auto 115px auto;
+            width: 346px;
+        }
+    }
+    &-button {
+        margin-top: -$line-height_button/2;
+    }
+}
+

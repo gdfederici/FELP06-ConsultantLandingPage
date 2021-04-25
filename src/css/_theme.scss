@@ -147,3 +147,14 @@ h6 { color: $color-h6; }
     color: $color-text_light;
     cursor: pointer;
 }
+
+
+/*** FEATURE ***/
+.feature {
+    background: url('../img/back_feature.png') no-repeat bottom left;
+}
+.boxes {
+    &-box {
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    }
+}
