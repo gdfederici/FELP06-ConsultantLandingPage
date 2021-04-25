@@ -18,7 +18,7 @@ module.exports = {
         // EN_ Generate an HTML file.
         new HtmlWebpackPlugin({
             title: 'Output Management',
-            template: 'src/index.html',
+            template: path.resolve(__dirname, "src", "index.html"),
         }),
     ],
     // IT_ Cartella di output per i file compilati e nome del file Javascript.
@@ -72,6 +72,18 @@ module.exports = {
             {
                 test: /\.html$/i,
                 loader: 'html-loader',
+            },
+            // EN_ Loader -> js babel.
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                },
+                generator: { filename: 'scripts/[name][ext]' }
             }
         ]
     }
