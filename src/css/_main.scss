@@ -91,3 +91,17 @@
         margin-bottom: 12px;
     }
 }
+
+
+/*** PEOPLE ***/
+.people {
+    margin: 0 242px 0 245px;
+    height: 388px;
+    & h3 {
+        padding-top: 106px;
+        margin-bottom: 16px;
+    }
+    & p {
+        width: 449px;
+    }
+}

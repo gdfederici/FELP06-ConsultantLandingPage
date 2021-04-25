@@ -20,6 +20,14 @@
         padding: 95px 5% 192px 5%;
     }
 
+
+/*** PEOPLE ***/
+    .people {
+        margin: 0 5%;
+    }
+
+
+
 }
 
 
@@ -80,5 +88,24 @@
         flex-direction: column;
         align-items: center;
     }
+
+
+/*** PEOPLE ***/
+    .people {
+        text-align: center;
+        height: auto;
+        background: url('../img/people.png') no-repeat bottom;
+        padding-bottom: 388px;
+        overflow: hidden;
+        & h3 {
+            margin-top: 0;
+        }
+        & p {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+
 
 }
