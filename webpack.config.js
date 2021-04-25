@@ -76,7 +76,7 @@ module.exports = {
             },
             // EN_ Loader -> images.
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|png|svg|ico)$/,
                 type: 'asset',
                 generator: { filename: 'img/[name][ext]' }
             },
