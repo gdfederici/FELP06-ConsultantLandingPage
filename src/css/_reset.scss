@@ -49,14 +49,21 @@ table {
 
 
 /***** GDFEDERICI *****/
+
 /*** VARIABLES ***/
 $breakpoint: 1280px-1;
 $layout_max: 1600px;
 $layout_min: 360px;
+
 /*** BASECAMP ***/
 :root {
     font-size: 62.5%; /* px->rem in base 10 */
 }
 button {
 	border: none;
+}
+
+/*** LOGIN ***/
+input:focus {
+    outline: none;
 }

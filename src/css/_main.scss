@@ -300,3 +300,38 @@
         border-radius: 50%;
     }
 }
+
+
+/*** LOGIN ***/
+.login {
+    margin-top: 112px;
+    margin-bottom: 132px;
+    & h2 {
+        margin-left: 243px;
+        padding-bottom: $line-height_h2; 
+        width: 550px;
+    }
+    &-form {
+        border-radius: 10px;
+        margin: 12px 441px 132px 451px;
+        padding: 107px 135px 53px 173px;
+        & form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        & input {
+            border: 2px solid;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            padding: 11px 40px;
+        }
+        & button {
+            border-radius: 5px;
+            padding: 21px 78px;
+            margin-bottom: 30px;
+            width: 220px;
+        }
+    }
+}

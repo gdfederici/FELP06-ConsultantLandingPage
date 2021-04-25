@@ -52,6 +52,20 @@
     }
 
 
+/*** LOGIN ***/
+    .login {
+        & h2 {
+        margin: auto;
+        }
+        &-form {
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+        }
+    }
+
+
+
 }
 
 
@@ -209,6 +223,21 @@
     }
 
 
+/*** LOGIN ***/
+    .login {
+        & h2 {
+            width: 90%;
+        }
+        &-form {
+            width: 80%;
+            padding-left: 5%;
+            padding-right: 5%;
+            & input {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
 
 
 }
