@@ -27,6 +27,19 @@
     }
 
 
+/*** FAQ ***/
+    .faq {
+        padding-left: 5%;
+        padding-right: 5%;
+        &-col {
+            &__1, &__2 {
+                width: 48%;
+            }
+        }
+    }
+
+
+
 
 }
 
@@ -113,6 +126,31 @@
         margin: 0 auto;
     }
 
+
+/*** FAQ ***/
+    .faq {
+        & h2 {
+            width: 95%;
+        }
+        &-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            &__1, &__2 {
+                width: 100%;
+            }
+            &__2 {
+                padding-top: 0;
+            }
+        }
+        &__mobile {
+            display: none;
+        }
+    }
+    .button__faq-more {
+        width: 100%;
+        padding: 33px 0 27px 0;
+    }
 
 
 

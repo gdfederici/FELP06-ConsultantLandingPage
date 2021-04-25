@@ -129,3 +129,64 @@
         }
     }
 }
+
+
+/*** FAQ ***/
+.faq {
+    margin-top: 150px;
+    padding: 129px 247px 0 250px;
+    position: relative;
+    & h2 {
+        width: 550px;
+        padding: $line-height_h2 0;
+    }
+    &-col { // Variare in base a decisione se meglio desktop o mobile
+        display: flex;
+        justify-content: space-between;
+        margin-top: 55px;
+        margin-bottom: 102px;
+        &__1 {
+            width: 540px;
+        }
+        &__2 {
+            width: 535px;
+            padding-top: 380px;
+        }
+    }
+    &-button {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 25px 27px 25px 34px;
+        margin-bottom: 12px;
+        border-radius: 23px;
+        z-index: 50;
+        &:after {
+            float: right;
+            padding-left: 25px;
+        }
+    }
+    &-response {
+        position: relative;
+        display: none;
+        padding: 65px 25px 60px 25px;
+        margin-top: -40px;
+        margin-bottom: 70px;
+        border-radius: 10px;
+        z-index: 40;
+    }
+    &__everactive {
+        display: block;
+    }
+    &-extra {
+        display: none;
+    }
+}
+.button__faq-more {
+    margin: 0 auto;
+    display: block;
+    padding: 33px 215px 27px 223px;
+    border-radius: 10px;
+}

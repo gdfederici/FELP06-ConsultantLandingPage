@@ -121,3 +121,29 @@ h6 { color: $color-h6; }
 .people {
     background: url('../img/people.png') no-repeat right;
 }
+
+
+/*** FAQ ***/
+.faq {
+    background: url('../img/back_faq.png') no-repeat top right;
+    &-button {
+        background: $color-back;
+        box-shadow: 0px 5px 10px #e0e0e0;
+        cursor: pointer;
+        &:after {
+            content: url(../img/ico_chevron-right.svg);
+        }
+    }
+    &-response {
+        box-shadow: 0px 25px 59px rgba(191, 191, 236, 0.72);
+        background: $color-back_faq;
+    }
+    &__active:after {
+        content: url(../img/ico_chevron-down.svg);
+    }
+}
+.button__faq-more {
+    background: $color-back_footer;
+    color: $color-text_light;
+    cursor: pointer;
+}
