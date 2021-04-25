@@ -58,3 +58,36 @@
         }
     }
 }
+
+
+/*** SERVICE ***/
+.service {
+    text-align: center;
+    padding: 95px 242px 192px 245px;
+    & h3 {
+        margin-bottom: 12px;
+    }
+    &-box {
+        margin-top: 139px;
+        display: flex;
+        justify-content: space-around;
+        &_all {
+            padding-top: 86px;
+        }
+    }
+}
+.box-service {
+    display: block;
+    width: 261px;
+    padding: 23px 11px;
+    text-decoration: none;
+    border: { // IT_ Così non c'è spostamento eccessivo legato allo spessore del bordo (sotto era più brutto). | EN_ There is no excessive displacement related to the thickness of the edge (below it is ugly).
+        radius: 5px;
+        style: solid;
+        width: 1px;
+        bottom-width: 7px;
+    }
+    & h4 {
+        margin-bottom: 12px;
+    }
+}

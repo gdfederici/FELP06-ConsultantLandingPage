@@ -89,3 +89,29 @@ h6 { color: $color-h6; }
         }
     }
 }
+
+
+/*** SERVICE ***/
+.service-box {
+    &_1 {
+        @include service-box_ico('service1');
+    }
+    &_2 {
+        @include service-box_ico('service2');
+    }
+    &_3 {
+        @include service-box_ico('service3');
+    }
+    &_4 {
+        @include service-box_ico('service4');
+    }
+}
+.box-service {
+    border-color: #fff;
+    & p {
+        color: $color-text_dark;
+    }
+    &:hover {
+        border-color: $color-text_testimonial;
+    }
+}

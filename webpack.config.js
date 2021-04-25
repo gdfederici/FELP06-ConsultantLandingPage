@@ -30,6 +30,18 @@ module.exports = {
     },
     module: {
         rules: [
+            // EN_ Loader -> js babel.
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                },
+                generator: { filename: 'scripts/[name][ext]' }
+            },
             // EN_ Loader -> CSS + SCSS.
             {
                 test: /\.s[ac]ss$/,
@@ -72,18 +84,6 @@ module.exports = {
             {
                 test: /\.html$/i,
                 loader: 'html-loader',
-            },
-            // EN_ Loader -> js babel.
-            {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                },
-                generator: { filename: 'scripts/[name][ext]' }
             }
         ]
     }

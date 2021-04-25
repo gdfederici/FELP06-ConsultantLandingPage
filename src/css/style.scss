@@ -1,5 +1,19 @@
 @import 'responsive';
 
-.pippo {
-    color: red;
+
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+/*** BASECAMP ***/
+body {
+    margin: 0 auto 0 auto;
+}
+@media screen and (max-width: $layout-min) {
+    body {
+        width: $layout-min;
+    }
+}
+@media screen and (min-width: $layout-max) {
+    body {
+        max-width: $layout-max;
+    }
 }
