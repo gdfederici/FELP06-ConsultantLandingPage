@@ -3,7 +3,6 @@
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
 @media screen and (max-width: $layout-max) {
-
 /*** HEADER ***/
     .header {
         &-navbar {
@@ -65,17 +64,25 @@
     }
 
 
+/*** FOOTER ***/
+    footer {
+        padding: 0 5%;
+    }
 
 }
-
-
-/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
-
 
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
 @media screen and (max-width: $breakpoint) {
+    /*** FOOTER ***/
+        .footer-widget {
+            width: 90%;
+        }
+    }
 
+/*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
+
+@media screen and (max-width: $breakpoint) {
 /*** HEADER ***/
     .navbar {
         &-logo { 
@@ -239,5 +246,34 @@
         }
     }
 
+
+/*** FOOTER ***/
+    footer {
+        background-color: #9B9BCA;
+        &-widget {
+            flex-direction: column;
+            padding: 75px 0 25px 0;
+            width: auto;
+            text-align: center;
+            & ul {
+                margin-bottom: 25px;
+            }
+        }
+        &-end {
+            flex-direction: column;
+            & div {
+                margin: 10px auto;
+            }
+        }
+    }
+    
+    .end {
+        &-right {
+            flex-direction: column;
+        }
+        &-social {
+            padding-right: 0;
+        }
+    }
 
 }

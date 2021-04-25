@@ -335,3 +335,48 @@
         }
     }
 }
+
+
+/*** FOOTER ***/
+footer {
+    min-height: 490px;
+    padding: 0 245px 0 243px;
+    &-widget {
+        display: flex;
+        justify-content: space-between;
+        width: 842px;
+        margin: 0 auto;
+        padding: 177px 0 79px 0;
+        & ul {
+            margin-top: 12px;
+        }
+    }
+    &-end {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.end {
+    &-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-social {
+        display: flex;
+        justify-content: first baseline;
+        padding-right: 123px;
+        & img {
+            margin-left: 31px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    &-logo {
+        display: flex;
+        align-items: center;
+    }
+}

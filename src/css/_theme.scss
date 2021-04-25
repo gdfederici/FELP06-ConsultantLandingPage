@@ -199,3 +199,17 @@ h6 { color: $color-h6; }
         }
     }
 }
+
+
+/*** FOOTER ***/
+footer {
+    background: url(../img/back_footer-circle.png) no-repeat top;
+    color: $color-text_footer;
+    & a {
+        color: $color-text_footer;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
