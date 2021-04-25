@@ -23,7 +23,6 @@ function magicJS() {
     }
 }
 
-
 function moreFaq() {
     var faqExtra = document.getElementsByClassName("faq-extra");
     for ( let i = 0; i < faqExtra.length; i++) {
@@ -34,4 +33,18 @@ function moreFaq() {
         faqMobile[i].style.display = "flex";
     }
     document.getElementById("more-faq").style.display = "none";
+}
+
+var slideTestimonial = 1;
+    showTestimonial(slideTestimonial);
+function moreTestimonial() {
+    showTestimonial(slideTestimonial += 1);
+}
+function showTestimonial(n) {
+    var singleTestimonial = document.getElementsByClassName("testimonial-single");
+    if (n > singleTestimonial.length) {slideTestimonial = 1}
+    for (let j = 0; j < singleTestimonial.length; j++) {
+        singleTestimonial[j].style.display = "none";
+    }
+    singleTestimonial[slideTestimonial-1].style.display = "block";
 }

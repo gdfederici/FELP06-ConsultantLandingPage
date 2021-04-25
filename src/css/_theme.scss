@@ -158,3 +158,18 @@ h6 { color: $color-h6; }
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
     }
 }
+.testimonial {
+    &-slider {
+        background: $color-back;
+    }
+    &-single {
+        color: $color-text_testimonial;
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+    }
+    &-photo {
+        box-shadow: 2px 8px 15px rgba(147, 147, 147, 0.25);
+    }
+    &-name {
+        color: $color-text_dark;
+    }
+}

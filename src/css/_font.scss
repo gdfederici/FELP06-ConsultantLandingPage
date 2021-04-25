@@ -231,3 +231,16 @@ h6 {
 .feature {
     text-align: center;
 }
+.testimonial {
+    &-single {
+        text-align: left;
+    }
+    &-name {
+        font-weight: $font_bold;
+    }
+    &-rating {
+        & p {
+            font-size: $font-size_xs;
+        }
+    }
+}

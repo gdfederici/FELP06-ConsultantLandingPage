@@ -245,3 +245,58 @@
     }
 }
 
+.testimonial {
+    &-slider {
+        width: 488px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & p {
+            margin-bottom: $line-height_normal;
+        }
+    }
+    &-single {
+        width: 360px;
+        padding: 60px 92px 33px 37px;
+        border-radius: 10px;
+        display: none;
+    }
+    &-footer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        & p {
+            margin-bottom: 0;
+            &:nth-child(2) {
+                margin-top: -5px;
+            }
+        }
+    }
+    &-photo {
+        margin-right: 48px;
+        padding: 0;
+        width: 97px;
+        height: 97px;
+        border-radius: 50%;
+    }
+    &-rating {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -10px;
+        & img {
+            margin-right: 6px;
+        }
+        & p {
+            padding-left: 8px;
+        }
+    }
+    &-action {
+        margin-left: -70px;
+    }
+    &-button {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+    }
+}
