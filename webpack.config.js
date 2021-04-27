@@ -77,6 +77,12 @@ module.exports = {
                 type: 'asset',
                 generator: { filename: 'img/[name][ext]' }
             },
+            // EN_ Loader -> video.
+            {
+                test: /\.(mp4|webm)$/,
+                type: 'asset/resource',
+                generator: { filename: 'video/[name][ext]' }
+            },
             // EN_ Loader -> html.
             {
                 test: /\.html$/i,
