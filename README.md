@@ -13,6 +13,17 @@
 **EN_** HTML, CSS (flexbox and BEM methodology), SCSS, JS, Webpack, Figma, Trello, GitHub.<br/>
 <br/>
 
+## Responsive:
+**IT_** <br/>
+> 1600 pixel: precisione al pixel.<br/>
+< 1600 pixel: layout fluido.<br/>
+< 1280 pixel: layout mobile.<br/>
+**EN_** <br/>
+> 1600 pixel: pixel perfect.<br/>
+< 1600 pixel: fluid layout.<br/>
+< 1280 pixel: mobilelayout.<br/>
+<br/>
+
 ## Link:
 https://wfelp03-consultantlandingpage01.netlify.app/ <br/>
 <br/>
