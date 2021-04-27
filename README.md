@@ -15,13 +15,13 @@
 
 ## Responsive:
 **IT_** <br/>
-> 1600 pixel: precisione al pixel.<br/>
-< 1600 pixel: layout fluido.<br/>
-< 1280 pixel: layout mobile.<br/>
+* 1600 px: precisione al pixel.<br/>
+* 1280-1600 px: layout fluido.<br/>
+* 1280 px: layout mobile.<br/>
 **EN_** <br/>
-> 1600 pixel: pixel perfect.<br/>
-< 1600 pixel: fluid layout.<br/>
-< 1280 pixel: mobilelayout.<br/>
+* 1600 pixel: px perfect.<br/>
+* 1280-1600 px: fluid layout.<br/>
+* 1280 px: mobilelayout.<br/>
 <br/>
 
 ## Link:
