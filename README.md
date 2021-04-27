@@ -17,7 +17,8 @@
 **IT_** <br/>
 * 1600 px: precisione al pixel.<br/>
 * 1280-1600 px: layout fluido.<br/>
-* 1280 px: layout mobile.<br/>
+* 1280 px: layout mobile.<br/><br/>
+
 **EN_** <br/>
 * 1600 pixel: px perfect.<br/>
 * 1280-1600 px: fluid layout.<br/>
