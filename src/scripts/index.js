@@ -1,4 +1,5 @@
 import "../css/style.scss";
+import Thumb from '../img/consultantlandingpage_thumb.jpg';
 
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
@@ -46,3 +47,8 @@ function showTestimonial(n) {
     }
     singleTestimonial[slideTestimonial-1].style.display = "block";
 }
+
+
+ // Add the image to our existing div.
+ const myThumb = new Image();
+ myThumb.src = Thumb;
