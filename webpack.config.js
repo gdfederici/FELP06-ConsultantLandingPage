@@ -5,7 +5,7 @@ module.exports = {
     mode: "production", 
     // IT_ Guarda i file e ricompila ogni volta che cambiano.
     // EN_ Watch files and recompile whenever they change.
-    watch: true,
+    //watch: true,
     // IT_ File Javascript di entrata pre-compilato.
     // EN_ Pre-compiled entry Javascript file.
     entry: {
