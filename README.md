@@ -33,5 +33,3 @@ https://wfelp03-consultantlandingpage01.netlify.app/ <br/>
 **IT_** Primo utilizzo pratico di JS in una pagina web e primo utilizzo assoluto di Webpack all'interno di un progetto. Per motivi di test ho separato le media queries in un file apposito.<br/>
 **EN_** My first time with JS in a web page and first time with Webpack in a project. For testing purposes I have separated the media queries in a separate file.<br/>
 <br/>
-
-**Work in progress...**
