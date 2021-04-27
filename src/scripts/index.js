@@ -22,6 +22,10 @@ window.moreFaq = function() {
 }
 
 
+/*** SOCIAL SHARE ***/
+const myThumb = new Image();
+myThumb.src = Thumb;
+
 /*** FAQ ***/
 var faqList = document.getElementsByClassName("faq-button"); /* IT_ Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona */
 for ( let i = 0; i < faqList.length; i++) {
@@ -47,8 +51,3 @@ function showTestimonial(n) {
     }
     singleTestimonial[slideTestimonial-1].style.display = "block";
 }
-
-
- // Add the image to our existing div.
- const myThumb = new Image();
- myThumb.src = Thumb;
