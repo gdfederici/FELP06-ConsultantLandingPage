@@ -35,7 +35,7 @@ for ( let i = 0; i < faqList.length; i++) {
 /*** TESTIMONIAL ***/
 var slideTestimonial = 1;
     showTestimonial(slideTestimonial);
-function moreTestimonial() {
+window.moreTestimonial = function() {
     showTestimonial(slideTestimonial += 1);
 }
 function showTestimonial(n) {
