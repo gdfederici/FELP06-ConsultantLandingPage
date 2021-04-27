@@ -20,7 +20,7 @@
 * 1280 px: layout mobile.<br/><br/>
 
 **EN_** <br/>
-* 1600 pixel: px perfect.<br/>
+* 1600 px: pixel perfect.<br/>
 * 1280-1600 px: fluid layout.<br/>
 * 1280 px: mobilelayout.<br/>
 <br/>
