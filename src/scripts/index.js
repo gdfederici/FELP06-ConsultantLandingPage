@@ -38,6 +38,18 @@ window.validateForm = function() {
     }
 }
 
+/*** TESTIMONIAL FUNCTIONS */
+window.moreTestimonial = function() {
+    showTestimonial(slideTestimonial += 1);
+}
+function showTestimonial(n) {
+    var singleTestimonial = document.getElementsByClassName("testimonial-single");
+    if (n > singleTestimonial.length) {slideTestimonial = 1}
+    /* for (let j = 0; j < singleTestimonial.length; j++) { singleTestimonial[j].style.display = "none"; } */
+    Array.from(singleTestimonial).forEach(element => element.style.display = "none" );
+    singleTestimonial[slideTestimonial-1].style.display = "block";
+}
+
 
 /*** SOCIAL SHARE ***/
 const myThumb = new Image();
@@ -56,14 +68,4 @@ for ( let i = 0; i < faqList.length; i++) {
 
 /*** TESTIMONIAL ***/
 var slideTestimonial = 1;
-    showTestimonial(slideTestimonial);
-window.moreTestimonial = function() {
-    showTestimonial(slideTestimonial += 1);
-}
-function showTestimonial(n) {
-    var singleTestimonial = document.getElementsByClassName("testimonial-single");
-    if (n > singleTestimonial.length) {slideTestimonial = 1}
-    /* for (let j = 0; j < singleTestimonial.length; j++) { singleTestimonial[j].style.display = "none"; } */
-    Array.from(singleTestimonial).forEach(element => element.style.display = "none" );
-    singleTestimonial[slideTestimonial-1].style.display = "block";
-}
+showTestimonial(slideTestimonial);
