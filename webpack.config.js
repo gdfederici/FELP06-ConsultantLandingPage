@@ -2,14 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "production", 
-    // IT_ File Javascript di entrata pre-compilato.
-    // EN_ Pre-compiled entry Javascript file.
+    mode: "development", 
+    // IT_ File Javascript di entrata pre-compilato. | EN_ Pre-compiled entry Javascript file.
     entry: {
         index: './src/scripts/index.js',
     },
-    // IT_ Mappe di origine a supporto del mode development.
-    // EN_ Source maps to help mode development.
+    // IT_ Mappe di origine a supporto del mode development. | EN_ Source maps to help mode development.
     devtool: 'inline-source-map',
     plugins: [
         // EN_ Generate an HTML file.
@@ -18,8 +16,7 @@ module.exports = {
             template: path.resolve(__dirname, "src", "index.html"),
         }),
     ],
-    // IT_ Cartella di output per i file compilati e nome del file Javascript.
-    // EN_ Output folder for compiled files and Javascript filename.
+    // IT_ Cartella di output per i file compilati e nome del file Javascript. | EN_ Output folder for compiled files and Javascript filename.
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -43,19 +40,16 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/,
                 use: [
-                    // IT_ Crea i nodi style dal JS.
-                    // EN_ Creates `style` nodes from JS strings.
+                    // IT_ Crea i nodi style dal JS. | EN_ Creates `style` nodes from JS strings.
                     "style-loader",
-                    // IT_ Traduce CSS in CommonJS + generazione di mappe sorgente. 
-                    // EN_ Translates CSS into CommonJS + generation of source maps.
+                    // IT_ Traduce CSS in CommonJS + generazione di mappe sorgente. | EN_ Translates CSS into CommonJS + generation of source maps.
                     {
                         loader: "css-loader",
                         options: {
                             sourceMap: true,
                         },
                     },
-                    // IT_ Compila Sass to CSS + generazione di mappe sorgente.
-                    // EN_ Compiles Sass to CSS + generation of source maps.
+                    // IT_ Compila Sass to CSS + generazione di mappe sorgente. | EN_ Compiles Sass to CSS + generation of source maps.
                     {
                         loader: "sass-loader",
                         options: {

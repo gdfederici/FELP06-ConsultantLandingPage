@@ -51,6 +51,7 @@ function showTestimonial(n) {
 }
 
 
+
 /*** SOCIAL SHARE ***/
 const myThumb = new Image();
 myThumb.src = Thumb;
