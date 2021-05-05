@@ -21,6 +21,21 @@ window.moreFaq = function() {
     document.getElementById("more-faq").style.display = "none";
 }
 
+window.validateForm = function() {
+    let usrRegex = /^[A-Za-z\d]+$/;
+    let pswRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&].{8,}$/;
+    let usrValid = document.forms["loginForm"]["username"].value.match(usrRegex);
+    let pswValid = document.forms["loginForm"]["password"].value.match(pswRegex);
+    if (usrValid == null) {
+        alert("Username can only contain letters and numbers");
+        return false;
+    }
+    if (pswValid == null) {
+        alert("Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
+        return false;
+    }
+}
+
 
 /*** SOCIAL SHARE ***/
 const myThumb = new Image();
