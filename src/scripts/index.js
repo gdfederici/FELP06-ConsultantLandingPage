@@ -1,5 +1,6 @@
 import "../css/style.scss";
 import Thumb from '../img/consultantlandingpage_thumb.jpg';
+import faqJson from '../scripts/faq.json';
 
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
@@ -14,7 +15,7 @@ window.magicMenu = function() {
 // IT_ Carico i dati dal contenuto json. | EN_ Load the data from the json content.
 window.loadExternalData = async function() {
     try {
-        let response = await fetch("./scripts/faq.json");
+        let response = await fetch(faqJson);
         let json = await response.json()
         return json.faqList;
     } catch (error) {
