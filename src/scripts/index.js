@@ -12,7 +12,7 @@ window.magicMenu = function() {
 
 /*** CREATE FAQ ***/
 // IT_ Carico i dati dal contenuto json. | EN_ Load the data from the json content.
-async function loadExternalData() {
+window.loadExternalData = async function() {
     try {
         let response = await fetch("scripts/faq.json")
         let json = await response.json()
@@ -23,7 +23,7 @@ async function loadExternalData() {
     }
 }
 // IT_
-async function isFaq() {
+window.isFaq = async function() {
     try {
         let listFaq = await loadExternalData();
         let faqCol = document.createElement("ul");
