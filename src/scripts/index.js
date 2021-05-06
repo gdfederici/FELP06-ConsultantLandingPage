@@ -10,6 +10,79 @@ window.magicMenu = function() {
     (elMenuCta.classList.contains("button")) ? (elMenuCta.classList.remove("button", "button__base")) : (elMenuCta.classList.add("button", "button__base")); // IT_ Aggiunge/rimuove la classe bottone a elemento CTA, così appare semplice in mobile e bottone in desktop. | EN_ Add/remove the button class to the CTA element.
 }
 
+/*** CREATE FAQ ***/
+// IT_ Carico i dati dal contenuto json. | EN_ Load the data from the json content.
+async function loadExternalData() {
+    try {
+        let response = await fetch("scripts/faq.json")
+        let json = await response.json()
+        return json.faqList;
+    } catch (error) {
+        console.log("Si è verificato un errore in loadExternalData:", error)
+        return false
+    }
+}
+// IT_
+async function isFaq() {
+    try {
+        let listFaq = await loadExternalData();
+        let faqCol = document.createElement("ul");
+        faqCol.className = "faq-col";
+        let faqCol1 = document.createElement("ul");
+        faqCol1.className = "faq-col__1";
+        let faqCol2 = document.createElement("ul");
+        faqCol2.className = "faq-col__2";
+        let allFaq = listFaq.length;
+        let halfFaq = Math.floor(allFaq/2);
+        for (let i=0; i<halfFaq; i++) {
+            let extra = true;
+            if (i < 7) { extra = false; }
+            faqCol1.appendChild(createFaq(listFaq[i].question, listFaq[i].answer, extra, 1, i));
+        }
+        for (let i=halfFaq; i<allFaq; i++) {
+            let extra = true;
+            if (i < halfFaq+6) { extra = false; }
+            faqCol2.appendChild(createFaq(listFaq[i].question,listFaq[i].answer, extra, 2, i));
+        }
+        faqCol.appendChild(faqCol1);
+        faqCol.appendChild(faqCol2);
+        document.getElementById("magicfaq").appendChild(faqCol);
+        
+        var faqList = document.getElementsByClassName("faq-button"); /* Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona */
+        for ( let i = 0; i < faqList.length; i++) {
+            faqList[i].addEventListener("click", function() { 
+                this.classList.toggle("faq__active");
+                let faqResponse = this.nextElementSibling;     // Toggle between hiding and showing the active panel 
+                (faqResponse.style.display === "block") ? (faqResponse.style.display = "none") : (faqResponse.style.display = "block"); // opertore ternario
+                }
+            );
+        }
+        return;
+    } catch (error) {
+        console.log("Si è verificato un errore in isFaq:", error)
+        return false;
+    }
+}
+
+function createFaq(itemQuestion, itemAnswer, hidden, column, position) {
+        listItem = document.createElement("li");
+        listItem.className = "item-column"+column;
+        listItemButton = document.createElement("button");
+        if (column === 1) {
+            (hidden) ? (listItemButton.className = "button__faq faq-button faq-extra") : (listItemButton.className = "button__faq faq-button");
+        }
+        else {
+            (hidden) ? (listItemButton.className = "button__faq faq-button faq-extra") : (listItemButton.className = "button__faq faq-button faq__mobile");
+        }
+        listItemButton.appendChild(document.createElement("p").appendChild(document.createTextNode(itemQuestion)));
+        listItemAccordion = document.createElement("div");
+        ( position === 0) ? (listItemAccordion.className = "faq-response faq__everactive") : (listItemAccordion.className = "faq-response");
+        listItemAccordion.appendChild(document.createElement("p").appendChild(document.createTextNode(itemAnswer)));
+        listItem.appendChild(listItemButton);
+        listItem.appendChild(listItemAccordion);
+        return listItem;
+}
+
 /*** BUTTON LOAD MORE FAQ ***/
 window.moreFaq = function() {
     /* var faqExtra = document.getElementsByClassName("faq-extra");
@@ -57,7 +130,8 @@ const myThumb = new Image();
 myThumb.src = Thumb;
 
 /*** FAQ ***/
-var faqList = document.getElementsByClassName("faq-button"); /* IT_ Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona */
+isFaq();
+/*var faqList = document.getElementsByClassName("faq-button"); /* IT_ Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona 
 for ( let i = 0; i < faqList.length; i++) {
     faqList[i].addEventListener("click", function() { 
         this.classList.toggle("faq__active");
@@ -65,7 +139,7 @@ for ( let i = 0; i < faqList.length; i++) {
         (faqResponse.style.display === "block") ? (faqResponse.style.display = "none") : (faqResponse.style.display = "block"); // IT_ Opertore ternario.
         }
     );
-}
+}*/
 
 /*** TESTIMONIAL ***/
 var slideTestimonial = 1;
