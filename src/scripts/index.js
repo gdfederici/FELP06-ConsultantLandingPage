@@ -131,16 +131,9 @@ const myThumb = new Image();
 myThumb.src = Thumb;
 
 /*** FAQ ***/
+console.log(faqJson);
 isFaq();
-/*var faqList = document.getElementsByClassName("faq-button"); /* IT_ Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona 
-for ( let i = 0; i < faqList.length; i++) {
-    faqList[i].addEventListener("click", function() { 
-        this.classList.toggle("faq__active");
-        let faqResponse = this.nextElementSibling;     // EN_ Toggle between hiding and showing the active panel 
-        (faqResponse.style.display === "block") ? (faqResponse.style.display = "none") : (faqResponse.style.display = "block"); // IT_ Opertore ternario.
-        }
-    );
-}*/
+
 
 /*** TESTIMONIAL ***/
 var slideTestimonial = 1;
