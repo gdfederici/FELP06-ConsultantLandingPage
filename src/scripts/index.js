@@ -14,7 +14,7 @@ window.magicMenu = function() {
 // IT_ Carico i dati dal contenuto json. | EN_ Load the data from the json content.
 window.loadExternalData = async function() {
     try {
-        let response = await fetch("scripts/faq.json")
+        let response = await fetch("./scripts/faq.json")
         let json = await response.json()
         return json.faqList;
     } catch (error) {
