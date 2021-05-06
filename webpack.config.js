@@ -36,6 +36,12 @@ module.exports = {
                 },
                 generator: { filename: 'scripts/[name][ext]' }
             },
+            // EN_ Loader -> json.
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+                generator: { filename: 'scripts/[name][ext]' }
+            }
             // EN_ Loader -> CSS + SCSS.
             {
                 test: /\.s[ac]ss$/,
