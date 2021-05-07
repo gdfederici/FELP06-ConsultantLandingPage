@@ -11,49 +11,45 @@ window.magicMenu = function() {
     (elMenuCta.classList.contains("button")) ? (elMenuCta.classList.remove("button", "button__base")) : (elMenuCta.classList.add("button", "button__base")); // IT_ Aggiunge/rimuove la classe bottone a elemento CTA, così appare semplice in mobile e bottone in desktop. | EN_ Add/remove the button class to the CTA element.
 }
 
-/*** CREATE FAQ ***/
-// IT_
+/*** FAQ ***/
 window.isFaq = function() {
-    try {
-        let listFaq = faqJson.faqList;
-        let faqCol = document.createElement("ul");
-        faqCol.className = "faq-col";
-        let faqCol1 = document.createElement("ul");
-        faqCol1.className = "faq-col__1";
-        let faqCol2 = document.createElement("ul");
-        faqCol2.className = "faq-col__2";
-        let allFaq = listFaq.length;
-        let halfFaq = Math.floor(allFaq/2);
-        for (let i=0; i<halfFaq; i++) {
-            let extra = true;
-            if (i < 7) { extra = false; }
-            faqCol1.appendChild(createFaq(listFaq[i].question, listFaq[i].answer, extra, 1, i));
-        }
-        for (let i=halfFaq; i<allFaq; i++) {
-            let extra = true;
-            if (i < halfFaq+6) { extra = false; }
-            faqCol2.appendChild(createFaq(listFaq[i].question,listFaq[i].answer, extra, 2, i));
-        }
-        faqCol.appendChild(faqCol1);
-        faqCol.appendChild(faqCol2);
-        document.getElementById("magicfaq").appendChild(faqCol);
-        
-        var faqList = document.getElementsByClassName("faq-button"); /* Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona */
-        for ( let i = 0; i < faqList.length; i++) {
-            faqList[i].addEventListener("click", function() { 
-                this.classList.toggle("faq__active");
-                let faqResponse = this.nextElementSibling;     // Toggle between hiding and showing the active panel 
-                (faqResponse.style.display === "block") ? (faqResponse.style.display = "none") : (faqResponse.style.display = "block"); // opertore ternario
-                }
-            );
-        }
-        return;
-    } catch (error) {
-        console.log("Si è verificato un errore in isFaq:", error)
-        return false;
+    // IT_ Creo le FAQ prendendole dal file json esterno. | EN_ Create FAQs taking them from the external json file.
+    let listFaq = faqJson.faqList;
+    let faqCol = document.createElement("ul");
+    faqCol.className = "faq-col";
+    let faqCol1 = document.createElement("ul");
+    faqCol1.className = "faq-col__1";
+    let faqCol2 = document.createElement("ul");
+    faqCol2.className = "faq-col__2";
+    let allFaq = listFaq.length;
+    let halfFaq = Math.floor(allFaq/2);
+    // IT_ Prima colonna contenente metà delle FAQ, le prime 7 visibili e le altre nascoste. | EN_First column containing half of the FAQ, the first 7 visible and the others hidden.
+    for (let i=0; i<halfFaq; i++) {
+        let extra = true;
+        if (i < 7) { extra = false; }
+        faqCol1.appendChild(createFaq(listFaq[i].question, listFaq[i].answer, extra, 1, i));
+    }
+    //IT_ Seconda colonna contenente la seconda metà delle FAQ, le prime 6 visibili e le altre nascoste. | EN_ Second column containing the second half of the FAQ, the first 6 visible and the others hidden.
+    for (let i=halfFaq; i<allFaq; i++) {
+        let extra = true;
+        if (i < halfFaq+6) { extra = false; }
+        faqCol2.appendChild(createFaq(listFaq[i].question,listFaq[i].answer, extra, 2, i));
+    }
+    faqCol.appendChild(faqCol1);
+    faqCol.appendChild(faqCol2);
+    document.getElementById("magicfaq").appendChild(faqCol);
+    
+    var faqList = document.getElementsByClassName("faq-button"); /* Collezione di oggetti simil vettore, ma non vettore per questo forEach non funziona */
+    for ( let i = 0; i < faqList.length; i++) {
+        faqList[i].addEventListener("click", function() { 
+            this.classList.toggle("faq__active");
+            let faqResponse = this.nextElementSibling;     // Toggle between hiding and showing the active panel 
+            (faqResponse.style.display === "block") ? (faqResponse.style.display = "none") : (faqResponse.style.display = "block"); // opertore ternario
+            }
+        );
     }
 }
-
+// IT_ Genera la singola FAQ assegnandole le giuste classi in base alla colonna di appartenenza e al suo numero. | EN_Generate the single FAQ by assigning it the right classes based on the column it belongs to and its number.
 function createFaq(itemQuestion, itemAnswer, hidden, column, position) {
         let listItem = document.createElement("li");
         listItem.className = "item-column"+column;
