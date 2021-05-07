@@ -1,6 +1,6 @@
 import "../css/style.scss";
 import Thumb from '../img/consultantlandingpage_thumb.jpg';
-import faqJson from '../scripts/faq.json';
+import faqJson from './faq.json';
 
 /*** ------------------------- *** ------------------------- *** ------------------------- *** ------------------------- ***/
 
@@ -12,21 +12,10 @@ window.magicMenu = function() {
 }
 
 /*** CREATE FAQ ***/
-// IT_ Carico i dati dal contenuto json. | EN_ Load the data from the json content.
-window.loadExternalData = async function() {
-    try {
-        let response = await fetch(faqJson);
-        let json = await response.json()
-        return json.faqList;
-    } catch (error) {
-        console.log("Si è verificato un errore in loadExternalData:", error)
-        return false
-    }
-}
 // IT_
-window.isFaq = async function() {
+window.isFaq = function() {
     try {
-        let listFaq = await loadExternalData();
+        let listFaq = faqJson.faqList;
         let faqCol = document.createElement("ul");
         faqCol.className = "faq-col";
         let faqCol1 = document.createElement("ul");
@@ -66,9 +55,9 @@ window.isFaq = async function() {
 }
 
 function createFaq(itemQuestion, itemAnswer, hidden, column, position) {
-        listItem = document.createElement("li");
+        let listItem = document.createElement("li");
         listItem.className = "item-column"+column;
-        listItemButton = document.createElement("button");
+        let listItemButton = document.createElement("button");
         if (column === 1) {
             (hidden) ? (listItemButton.className = "button__faq faq-button faq-extra") : (listItemButton.className = "button__faq faq-button");
         }
@@ -76,7 +65,7 @@ function createFaq(itemQuestion, itemAnswer, hidden, column, position) {
             (hidden) ? (listItemButton.className = "button__faq faq-button faq-extra") : (listItemButton.className = "button__faq faq-button faq__mobile");
         }
         listItemButton.appendChild(document.createElement("p").appendChild(document.createTextNode(itemQuestion)));
-        listItemAccordion = document.createElement("div");
+        let listItemAccordion = document.createElement("div");
         ( position === 0) ? (listItemAccordion.className = "faq-response faq__everactive") : (listItemAccordion.className = "faq-response");
         listItemAccordion.appendChild(document.createElement("p").appendChild(document.createTextNode(itemAnswer)));
         listItem.appendChild(listItemButton);
@@ -131,9 +120,7 @@ const myThumb = new Image();
 myThumb.src = Thumb;
 
 /*** FAQ ***/
-console.log(faqJson);
 isFaq();
-
 
 /*** TESTIMONIAL ***/
 var slideTestimonial = 1;
